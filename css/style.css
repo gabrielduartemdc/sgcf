@@ -1,0 +1,282 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/* ==============================
+   NAVBAR
+============================== */
+
+.navbar-sgcf {
+    height: 65px;
+    background: linear-gradient(90deg, #1f4f8f 0%, #2f5d9e 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-sgcf .nav-link {
+    transition: color 0.2s;
+}
+
+.navbar-sgcf .nav-link:hover,
+.navbar-sgcf .nav-link.active {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* Bordas dos botões */
+.navbar-nav > .nav-item > .nav-link {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav > .nav-item > .nav-link:hover {
+    border-color: #0d6efd;
+}
+
+.navbar-sgcf .btn-agendar {
+  background-color: #ffc107;  
+  color: #1d4e89;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  padding: 0.45rem 1.2rem;
+  white-space: nowrap;
+  transition: transform 0.15s, background-color 0.15s;
+}
+
+.navbar-sgcf .btn-agendar:hover {
+  background-color: #ffca2c;
+  transform: translateY(-1px);
+}
+
+.navbar-sgcf .btn-colaborador {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  padding: 0.4rem 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.navbar-sgcf .btn-colaborador:hover {
+  background-color: #fff;
+  color: #1d4e89;
+}
+
+
+/* ==============================
+   SEÇÃO PRINCIPAL
+============================== */
+
+.secao-principal {
+    width: 100%;
+    height: calc(100dvh - 65px);
+    margin: 0;
+    overflow: hidden;
+}
+
+
+/* ==============================
+   PAINEL DE BOAS-VINDAS
+============================== */
+
+.painel-boas-vindas {
+    height: 100%;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.painel-boas-vindas h1 {
+    color: #1f2a3a;
+}
+
+
+/* ==============================
+   SELO DA CLÍNICA
+============================== */
+
+.selo-clinica {
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1f4f8f;
+    background-color: #e6eefa;
+    border-radius: 50px;
+}
+
+
+/* ==============================
+   Tela de cadastro
+============================== */
+
+/* Cadastro: só a coluna do formulário rola */
+@media (min-width: 768px) {
+  .secao-principal.secao-cadastro {
+    height: calc(100vh - 65px);
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .secao-cadastro .painel-form {
+    overflow-y: auto;
+  }
+
+  .secao-cadastro .painel-form > form {
+    height: auto;
+    min-height: 0;
+  }
+}
+
+/* ==============================
+   DIVISOR
+============================== */
+
+.divisor {
+    width: 80px;
+    border: 0;
+    border-top: 3px solid #1f4f8f;
+    opacity: 1;
+}
+
+
+/* ==============================
+   TEXTO DE DESTAQUE
+============================== */
+
+.destaque-texto {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #4a5563;
+    max-width: 380px;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   CARROSSEL
+============================== */
+
+.secao-principal > .col-md-7 {
+    height: 100%;
+    min-height: 0;
+    display: flex;
+}
+
+.carrossel-clinica {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.carrossel-clinica .carousel-inner,
+.carrossel-clinica .carousel-item {
+    height: 100%;
+}
+
+.carrossel-clinica img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #ffffff;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+/* Telas menores e tablets */
+@media (max-width: 991px) {
+
+    html, body {
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .navbar-sgcf {
+        height: auto;
+        min-height: 65px;
+    }
+
+    .secao-principal {
+        height: auto;
+        overflow: visible;
+    }
+
+    .painel-boas-vindas {
+        height: auto;
+        min-height: 450px;
+        padding: 2rem !important;
+    }
+
+    .secao-principal > .col-md-7 {
+    height: auto;
+    display: block;
+    }
+
+    .carrossel-clinica {
+    height: 400px;
+    }
+
+    .carrossel-clinica .carousel-inner,
+    .carrossel-clinica .carousel-item {
+        height: 400px;
+    }
+
+}
+
+
+/* Celulares */
+@media (max-width: 576px) {
+
+    .painel-boas-vindas {
+        min-height: 450px;
+        padding: 1.5rem !important;
+    }
+
+    .painel-boas-vindas h1 {
+        font-size: 1.7rem;
+    }
+
+    .destaque-texto {
+        font-size: 1rem;
+    }
+
+    .carrossel-clinica {
+        height: 280px;
+    }
+
+    .carrossel-clinica .carousel-inner,
+    .carrossel-clinica .carousel-item {
+        height: 280px;
+    }
+
+} 
+
+.fundo-form{
+    background: linear-gradient(90deg, #1f4f8f 0%, #FFF94C 100%);
+}
