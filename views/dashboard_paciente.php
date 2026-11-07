@@ -6,7 +6,6 @@ if (($_SESSION['perfil'] ?? '') !== 'paciente') {
 }
 ?>
 <?php require __DIR__ . '/layout/header.php'; ?>
-<body>
 
 <nav class="navbar navbar-sgcf sticky-top">
     <div class="container-fluid">
