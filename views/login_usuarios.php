@@ -61,6 +61,9 @@
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary w-100">Entrar</button>
                         </div>
+                        <div class="text-center">
+                            <a href="esqueci_senha.php" class="text-decoration-none small">Esqueci minha senha</a>
+                        </div>
                     </form>
                 </div>
             </div>
